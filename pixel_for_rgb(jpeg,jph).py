@@ -8,13 +8,10 @@ image = Image.open(image_path)
 rgb_values = list(image.getdata())
 dosya = open('metin_dosyasi.txt', 'w') 
 
-rgba_values = [((r, g, b, a) if image.mode == 'RGBA' else (r, g, b))
-               for r, g, b, a in rgb_values]
-
 # Print the RGB values of the first few pixels
 for pixel in rgb_values:
-    dosya.write(f"{pixel[0]},{pixel[1]},{pixel[2]},\n")
-
+    dosya.write(f"{pixel[0]},{pixel[1]},{pixel[2]},")
+#will write the pixels without \n
 
 dosya.close()
  
