@@ -21,9 +21,10 @@ int main() {
     glfwMakeContextCurrent(window); 
 
     GLfloat vertices[] = {
-        0.0f,  0.6f,
-       -0.6f, -0.6f,
-        0.6f, -0.6f
+        //Coordinates of triangle vertex
+        0.0f,  0.6f, /*Upper Vertex*/1.0f,0.0f,0.0f,//RED
+       -0.6f, -0.6f,/*Lower Left Vertex*/0.0f,1.0f,0.0f,//GREEN
+        0.6f, -0.6f,/*Lower Rigth Vertex*/0.0f,0.0f,1.0f//BLUE
     };
 
     GLuint vertexBuffer;
@@ -33,14 +34,18 @@ int main() {
 
     const char* vertexShaderCode =
         "attribute vec2 aPosition;\n"
+        "attribute vec3 aColor;\n"
+        "varying vec3 vColor;"
         "void main() {\n"
         "    gl_Position = vec4(aPosition, 0.0, 1.0);\n"
+        "    vColor = aColor;\n"
         "}";
 
     const char* fragmentShaderCode =
         "precision mediump float;\n"
+        "varying vec3 vColor;\n"
         "void main() {\n"
-        "    gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);\n"
+        "    gl_FragColor = vec4(vColor,1.0);\n"
         "}";
    
     GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -51,28 +56,34 @@ int main() {
     glShaderSource(fragmentShader, 1, &fragmentShaderCode, NULL);
     glCompileShader(fragmentShader);
 
-    /*Solution 1
+    /*Solution 1*/
     GLuint shaderProgram = glCreateProgram();
     glAttachShader(shaderProgram, vertexShader);
     glAttachShader(shaderProgram, fragmentShader);
     glLinkProgram(shaderProgram);
-    
+
 
     GLint aPosition = glGetAttribLocation(shaderProgram, "aPosition");
-    glVertexAttribPointer(aPosition, 2, GL_FLOAT, GL_FALSE, 0, 0);
+    glVertexAttribPointer(aPosition, 2, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)0);
     glEnableVertexAttribArray(aPosition);
-    */
-    /*Solution 1*/
+    GLint aColor= glGetAttribLocation(shaderProgram, "aColor");
+    glVertexAttribPointer(aColor, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)(2*sizeof(float)));
+    glEnableVertexAttribArray(aColor);
+    
 
+    /*Solution 2
     GLuint shaderProgram = glCreateProgram();
     glAttachShader(shaderProgram, vertexShader);
     glAttachShader(shaderProgram, fragmentShader);
     glBindAttribLocation(shaderProgram,0,"aPosition");
+    glBindAttribLocation(shaderProgram,1,"aColor");
     glLinkProgram(shaderProgram);
     
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)0);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)(2*sizeof(float)));
     glEnableVertexAttribArray(0);
-
+    glEnableVertexAttribArray(1);
+    */
     
 
     while (!glfwWindowShouldClose(window)) {
