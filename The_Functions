@@ -1,0 +1,27 @@
+I-SHADERS & PROGRAMS:
+  a.SHADER_OBJECTS
+    1...glCreateShader()
+    2...glShaderSource()
+    3...glCompileShader()
+    4...glReleaseShaderCompiler()
+    5...glDeleteShader
+  b.LOADING_SHADER_BINARIES
+    1...glShaderBinary()
+  c.PROGRAM_OBJECTS
+    1...glCreateProgram()
+    2...glAttachShader()
+    3...glDetachShader()
+    4...glLinkProgram()
+    5...glUseProgram()
+    6...glDeleteProgram()
+  d.SHADER_VARIABLES
+	  I.VERTEX_ATTRIBUTES
+    	1...glGetActiveAttrib()
+    	2...glGetAttribLocation()
+    	3...glBindAttribLocation()
+	  II.UNIFORM_VARIABLES
+    	1...glGetUniformLocation()
+    	2...glGetActiveUniform()
+    	3...glUniform{1234}{if}()
+			4...glUniform{1234}{if}v()
+  e.
