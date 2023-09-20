@@ -1,0 +1,1 @@
+glCullFace ve glPolygonOffSetFill gibi fonksiyonlarının etkisini daha iyi gözlemlemek için 3 Boyutlu nesnelere ihtiyacımız var.

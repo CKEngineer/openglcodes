@@ -1,0 +1,9 @@
+glPolygonOffsetFill fonksiyonu kullanılmıştır
+void glPolygonOffset(	GLfloat factor,
+ 	GLfloat units);
+
+glPolygonOffset fonksiyonu, OpenGL'de poligonların görünürlüğünü düzenlemek ve z-fighting gibi sorunları önlemek için kullanılan bir işlemdir. Bu işlev, poligonların birbirleriyle veya diğer nesnelerle olan ilişkilerini ayarlamak için kullanılır. 
+
+glPolygonOffset(factor, units):
+factor: Poligonların derinlik (z) değerlerini ayarlamak için kullanılan bir ölçek faktörüdür. Bu faktör, poligonların z-buffer'da ne kadar kaymasını kontrol eder. Daha büyük bir faktör, daha fazla kayma anlamına gelir.
+units: Kaymanın miktarını belirleyen birimlerdir. Daha büyük bir "units" değeri, daha fazla kayma sağlar.

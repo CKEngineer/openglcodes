@@ -1,0 +1,1 @@
+g++ -o 3D_CUBE_CULLED_BACK_FACE Main.cpp VBO.cpp EBO.cpp Texture.cpp shaderClass.cpp Camera.cpp -lglfw -lGLESv2

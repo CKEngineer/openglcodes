@@ -1,0 +1,8 @@
+glFrontFace ile glCullFace'in hangi yüzü sileceğini belirler.
+Grafik ve oyun geliştircileri çoğunlukla CCW kullanır.
+Kullanımı glFrontFace(GL_CCW) ya da glFrontFace(GL_CW).
+Böylece hangisinin ön yüz olduğunu belirlemiş oluruz.
+.Üçgenleri oluştururken indislerin sırası .
+ya saatin tersi yönündedir ya da saat yönünde belirlemek geliştiricinin tercihidir.
+
+
