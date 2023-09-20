@@ -1,0 +1,13 @@
+glTexSubImage2D()
+
+glTexSubImage2D fonksiyonu, OpenGL'de bir texture'nin belirli bir bölgesini güncellemek veya değiştirmek için kullanılan bir işlemdir. Bu işlem, özellikle büyük texture'ların yalnızca belirli bir kısmını değiştirmek istediğinizde oldukça kullanışlıdır. İşte glTexSubImage2D fonksiyonunun temel özelliklerine dair özet:
+
+void glTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid* data);
+
+target: Hedef texture türünü belirtir. Örneğin, GL_TEXTURE_2D veya GL_TEXTURE_CUBE_MAP gibi texture türleri kullanılabilir.
+level: Mipmap seviyesini belirtir. 0, temel (en yüksek çözünürlük) seviyedir.
+xoffset ve yoffset: Güncellenecek bölgenin sol üst köşesinin konumunu belirtir.
+width ve height: Güncellenecek bölgenin genişliğini ve yüksekliğini belirtir.
+format ve type: Güncelleme verisinin formatını ve veri türünü belirtir. Örneğin, GL_RGB ve GL_UNSIGNED_BYTE gibi.
+data: Güncelleme verisinin başladığı bellek adresini belirtir.
+glTexSubImage2D işlemi, belirtilen hedef texture'ın belirtilen mipmap seviyesi ve bölgesine yeni veriyi yükler. Bu, texture içeriğini güncellemek veya texture atlasları gibi kullanım senaryoları için oldukça kullanışlıdır. Özellikle büyük texture'ların tamamını her güncelleme için yüklemek yerine, sadece değişen bölgeyi güncellemek performansı artırabilir.

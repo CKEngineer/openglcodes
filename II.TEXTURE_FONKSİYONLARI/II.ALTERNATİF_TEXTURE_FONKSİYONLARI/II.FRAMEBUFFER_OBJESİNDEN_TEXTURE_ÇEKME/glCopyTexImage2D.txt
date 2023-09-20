@@ -1,0 +1,15 @@
+glCopyTexImage2D()
+
+
+glCopyTexImage2D fonksiyonu, OpenGL'de bir çerçeve tamponunun içeriğini bir texture'a kopyalamak için kullanılır. Bu işlem, belirli bir pencere veya viewport bölgesindeki pikselleri alarak bu pikseleri bir texture'a kopyalar. Bu, ekran yakalama, post-process efektler ve yüzey aynalama gibi birçok uygulamada kullanışlıdır.
+
+Parametre açıklamaları:
+
+target: Hedef texture türünü belirtir,
+level: Mipmap seviyesini belirtir. 0, temel (en yüksek çözünürlük) seviyedir.
+internalformat: Texture'ın dahili formatını belirtir, örneğin, GL_RGBA.
+x ve y: Kopyalamanın başlayacağı pencere veya viewport koordinatlarını belirtir.
+width ve height: Kopyalamanın genişliğini ve yüksekliğini belirtir.
+border: Kenar piksellerinin kalınlığını belirtir, genellikle 0 olarak ayarlanır.
+glCopyTexImage2D işlemi, belirtilen pencere bölgesinin içeriğini texture'a kopyalar ve bu texture'ı kullanılabilir hale getirir. Bu, dinamik olarak oluşturulan texture'lara erişmek için yaygın olarak kullanılır.
+

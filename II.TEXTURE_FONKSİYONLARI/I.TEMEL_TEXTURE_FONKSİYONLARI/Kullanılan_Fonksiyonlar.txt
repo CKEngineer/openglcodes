@@ -1,0 +1,33 @@
+glActiveTexture();
+glTexImage2D();
+glTexParameter();
+glGenerateMipmap();
+glBindTexture();
+glDeleteTextures();
+glGenTextures()
+
+
+glActiveTexture(unit):
+Bu fonksiyon, birden çok texture birimini yönetmek için kullanılır. unit parametresi, aktif texture birimini belirler. Genellikle GL_TEXTURE0 ile GL_TEXTURE31 arasındaki sabitlerle kullanılır.
+
+glTexImage2D(target, level, internalFormat, width, height, border, format, type, data):
+Bu fonksiyon, texture verilerini yüklemek için kullanılır. Texture'ın hedefi (target), texture seviyesi (level), dahili format (internalFormat), genişlik (width), yükseklik (height), kenar pikselleri (border), veri formatı (format), veri tipi (type), ve veri (data) gibi parametreleri alır.
+
+glTexParameter(target, pname, param):
+Bu fonksiyon, texture parametrelerini ayarlamak için kullanılır. Texture'ın hedefi (target), parametre adı (pname) ve parametre değeri (param) gerektirir. Bu, texture sarma, tekrarlama ve filtreleme gibi özellikleri ayarlamanıza yardımcı olur.
+
+glGenerateMipmap(target):
+Bu fonksiyon, mipmap seviyelerini otomatik olarak oluşturmak için kullanılır. Texture'ın hedefi (target) belirtilir. Bu, uzaklaştırma ve yaklaştırmada daha iyi görüntü kalitesi ve performans sağlar.
+
+glBindTexture(target, texture):
+Bu fonksiyon, belirli bir texture'ı belirli bir hedefe bağlamak için kullanılır. Texture'ın hedefi (target) ve texture adı (texture) belirtilir. Bu, OpenGL komutlarının ilgili texture üzerinde çalışmasını sağlar.
+
+glDeleteTextures(n, textures):
+Bu fonksiyon, bir veya daha fazla texture'ı silmek için kullanılır. Texture adları (textures) ve silinecek texture sayısı (n) belirtilir. Bu, gereksiz texture belleğini serbest bırakmanıza yardımcı olur.
+
+glGenTextures(n, textures):
+Bu fonksiyon, yeni texture adları oluşturmak için kullanılır. Texture adları (textures) ve oluşturulacak texture sayısı (n) belirtilir. Bu, yeni texture adlarını almak ve bunlara veri yüklemek için kullanılır.
+
+Bu fonksiyonlar, OpenGL'de texture işlemleri için temel ve önemli araçlardır. Texture'ları yaratmak, yüklemek, düzenlemek ve kullanmak, 2D ve 3D grafik uygulamalarının temel bir parçasıdır.
+
+

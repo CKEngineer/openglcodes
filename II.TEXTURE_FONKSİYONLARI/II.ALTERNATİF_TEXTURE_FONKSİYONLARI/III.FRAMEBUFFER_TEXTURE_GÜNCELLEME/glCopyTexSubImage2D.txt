@@ -1,0 +1,16 @@
+glCopyTexSubImage2D()
+
+
+glCopyTexSubImage2D, OpenGL'de bir texture'ın belirli bir bölgesini başka bir texture'a veya aynı texture'ın farklı bir bölgesine kopyalamak için kullanılan bir işlemdir. Bu işlem, texture içeriğini güncellemek veya render işlemleri sırasında texture'larda çeşitli efektler oluşturmak için kullanılabilir.
+
+void glCopyTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height);
+Parametre açıklamaları:
+
+target: Hedef texture türünü belirtir, genellikle GL_TEXTURE_2D olarak kullanılır.
+level: Mipmap seviyesini belirtir. 0, temel (en yüksek çözünürlük) seviyedir.
+xoffset ve yoffset: Hedef texture içinde kopyalamanın başlayacağı konumu belirtir.
+x ve y: Kaynak texture içinde kopyalamanın başlayacağı konumu belirtir.
+width ve height: Kopyalamanın genişliğini ve yüksekliğini belirtir.
+glCopyTexSubImage2D işlemi, belirtilen kaynak texture bölgesini hedef texture'a veya aynı texture'ın farklı bir bölgesine kopyalar. Bu, dinamik texture güncellemeleri, texture atlasları ve render işlemleri sırasında texture içeriğini manipüle etmek için kullanılır.
+
+Bu fonksiyon, texture manipülasyonu ve dinamik texture güncellemeleri için kullanışlıdır ve OpenGL uygulamalarında çeşitli kullanım senaryolarına sahiptir.
