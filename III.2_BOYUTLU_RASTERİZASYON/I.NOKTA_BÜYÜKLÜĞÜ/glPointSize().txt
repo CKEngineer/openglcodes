@@ -1,0 +1,2 @@
+gl_PointSize
+Shader fonksiyonunda primitive olarak nokta ayarlanmışsa noktaların büyüklüğü ayarlanabilir.

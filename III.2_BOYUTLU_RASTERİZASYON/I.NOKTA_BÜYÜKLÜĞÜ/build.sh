@@ -1,0 +1,1 @@
+g++ -o glPointSize_1 Main.cpp VBO.cpp EBO.cpp shaderClass.cpp -lglfw -lGLESv2

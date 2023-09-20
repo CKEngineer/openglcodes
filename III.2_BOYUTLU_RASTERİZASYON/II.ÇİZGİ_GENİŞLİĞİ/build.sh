@@ -1,0 +1,1 @@
+g++ -o LineWidth_1f Main.cpp VBO.cpp EBO.cpp shaderClass.cpp -lglfw -lGLESv2
