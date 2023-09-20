@@ -1,0 +1,1 @@
+g++ -o template_triangle Main.cpp VBO.cpp EBO.cpp shaderClass.cpp -lglfw -lGLESv2

@@ -1,0 +1,40 @@
+Shader Queries [6.1.8]
+boolean IsShader(uint shader);
+void GetShaderiv(uint shader, enum pname, int *params);
+pname: SHADER_TYPE, DELETE_STATUS, COMPILE_STATUS,INFO_LOG_LENGTH, SHADER_SOURCE_LENGTH
+void GetAttachedShaders(uint program, sizei maxCount, sizei *count, uint *shaders);
+void GetShaderInfoLog(uint shader, sizei bufSize, sizei *length, char *infoLog);
+void GetShaderSource(uint shader, sizei bufSize, sizei *length, char *source);
+
+void GetVertexAttribfv(uint index, enum pname, float *params);
+pname: CURRENT_VERTEX_ATTRIB , VERTEX_ATTRIB_ARRAY_x
+(where x may be BUFFER_BINDING, ENABLED, SIZE, STRIDE, TYPE,NORMALIZED)
+
+void GetVertexAttribiv(uint index, enum pname, int *params);
+pname: CURRENT_VERTEX_ATTRIB , VERTEX_ATTRIB_ARRAY_x
+(where x may be BUFFER_BINDING, ENABLED, SIZE, STRIDE, TYPE,NORMALIZED)
+
+void GetVertexAttribPointerv(uint index, enum pname, void **pointer);
+pname: VERTEX_ATTRIB_ARRAY_POINTER
+
+void GetUniformfv(uint program, int location, float *params)
+void GetUniformiv(uint program, int location, int *params)
+
+
+Program Queries [6.1.8]
+boolean IsProgram(uint program);
+void GetProgramiv(uint program, enum pname, int *params);
+pname: DELETE_STATUS, LINK_STATUS, VALIDATE_STATUS, INFO_LOG_LENGTH, 
+ATTACHED_SHADERS,
+ACTIVE_ATTRIBUTES, ACTIVE_ATTRIBUTE_MAX_LENGTH,
+ACTIVE_UNIFORMS, ACTIVE_UNIFORM_MAX_LENGTH
+void GetProgramInfoLog(uint program, sizei bufSize, sizei *length, char *infoLog);
+
+
+PRECISION_SORGULAMA
+void GetShaderPrecisionFormat(enum shadertype, enum precisiontype, int *range, int *precision);
+shadertype: VERTEX_SHADER, FRAGMENT_SHADER
+precision: LOW_FLOAT, MEDIUM_FLOAT, HIGH_FLOAT, LOW_INT,MEDIUM_INT, HIGH_INT
+
+DAHA_FAZLA_KAYNAK:
+https://graphicscompendium.com/intro/01-graphics-pipeline
