@@ -1,0 +1,2 @@
+glCompressedTexImage2D();
+glCompressedTexSubImage2D();
