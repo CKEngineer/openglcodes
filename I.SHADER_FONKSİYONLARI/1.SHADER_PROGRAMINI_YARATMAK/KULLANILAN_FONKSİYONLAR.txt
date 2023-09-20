@@ -1,0 +1,20 @@
+Shader Objects [2.10.1]
+uint glCreateShader(enum type);
+void glShaderSource(uint shader, sizei count, const char **string, const int *length);
+void glCompileShader(uint shader);
+void glReleaseShaderCompiler(void);
+void glDeleteShader(uint shader);
+
+Program Objects [2.10.3]
+uint glCreateProgram(void);
+void glAttachShader(uint program, uint shader);
+void glDetachShader(uint program, uint shader);
+void glLinkProgram(uint program);
+void glUseProgram(uint program);
+void glDeleteProgram(uint program);
+
+Shader Execution (Validation) [2.10.5]
+void glValidateProgram(uint program);
+
+Counterpart of glCompileShader
+void glShaderBinary(sizei count, const uint *shaders, enum binaryformat, const void *binary, sizei length);

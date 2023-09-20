@@ -1,0 +1,18 @@
+Shader Variables [2.10.4]
+	Vertex Attributes
+	void glGetActiveAttrib(uint program, uint index, sizei bufSize, sizei *length, int *size, enum *type, char *name);
+	*type returns: FLOAT, FLOAT_VEC{2,3,4}, FLOAT_MAT{2,3,4}
+	int glGetAttribLocation(uint program, const char *name);
+	void glBindAttribLocation(uint program, uint index, const char *name);
+
+	Uniform Variables
+	int glGetUniformLocation(uint program, const char *name);
+	void glGetActiveUniform(uint program, uint index, sizei bufSize, sizei *length, int *size, enum *type, char *name);
+	*type: FLOAT, FLOAT_VEC{2,3,4}, INT, INT_VEC{2,3,4}, BOOL,BOOL_VEC{2,3,4}, FLOAT_MAT{2,3,4}, SAMPLER_2D,SAMPLER_CUBE
+	void glUniform{1234}{if}(int location, T value);
+	void glUniform{1234}{if}v(int location, sizei count, T value);
+	void glUniformMatrix{234}fv(int location, sizei count, boolean transpose, const float *value);
+	transpose: FALSE
+
+DAHA_FAZLA_KAYNAK:
+https://graphicscompendium.com/intro/01-graphics-pipeline

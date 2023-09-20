@@ -1,0 +1,1 @@
+g++ -o triangle main.cpp -lglfw -lGLESv2
