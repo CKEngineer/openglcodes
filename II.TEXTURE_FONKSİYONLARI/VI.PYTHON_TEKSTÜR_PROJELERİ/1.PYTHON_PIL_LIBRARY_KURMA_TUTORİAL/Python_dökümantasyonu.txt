@@ -1,0 +1,23 @@
+1.Pythonu makinenize python'un resmi adresinden talimatları takip ederek kurun
+KAYNAK:https://www.python.org/downloads/ bu adreste ilgili işletim sisteminize uygun olarak pyhthon'u yükleyin ve talimatları takip edin
+
+2.PIL kütüphanesini yüklemek için aşağıdaki komutu terminalden girin:
+
+Windows:
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade Pillow
+çalışmaz ise:
+py -m pip install --upgrade pip
+py -m pip install --upgrade Pillow
+
+Linux
+sudo apt install pythonpy
+
+
+eğer işletim sisteminiz farklı ise aşağıdaki linki takip ederek işletim sistemine uygun talimatları uygulayabilirsiniz:
+https://pillow.readthedocs.io/en/latest/installation.html
+
+SON ADIM:py uzantılı python kodunuzun başına
+"from PIL import Image" ekleyin
+
+
