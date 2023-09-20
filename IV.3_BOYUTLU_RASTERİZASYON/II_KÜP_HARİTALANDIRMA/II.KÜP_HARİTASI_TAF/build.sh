@@ -1,0 +1,1 @@
+g++ -o 3D_TAFF_CUBE Main.cpp VBO.cpp EBO.cpp Texture.cpp shaderClass.cpp Camera.cpp -lglfw -lGLESv2
