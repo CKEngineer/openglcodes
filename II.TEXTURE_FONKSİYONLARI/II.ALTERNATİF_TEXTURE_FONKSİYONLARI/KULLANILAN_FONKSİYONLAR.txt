@@ -1,0 +1,19 @@
+glTexSubImage2D():
+glTexSubImage2D() fonksiyonu, bir OpenGL tekstürünün belirli bir bölgesini güncellemek için kullanılır.
+Yeni bir textür oluşturulmak içinde kullanılıabilir.
+Bu işlev, mevcut bir tekstürün içeriğini belirtilen bir dikdörtgen bölgeye yeni verilerle değiştirir.
+Kullanımı: glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels)
+Örnek: Bir tekstürün sadece belirli bir bölgesini değiştirmek için kullanılabilir, bu sayede animasyon gibi dinamik içerikleri oluşturmak mümkün olur.
+
+glCopyTexSubImage2D():
+glCopyTexSubImage2D() fonksiyonu, mevcut bir OpenGL tekstürünün bir başka tekstüre kopyalanmasını sağlar.
+Genellikle yansıma (reflection) veya gölgeleme (shadow mapping) gibi efektler için kullanılır.
+Kullanımı: glCopyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height)
+Örnek: Bir yüzeyin görüntüsünü kopyalayarak bir aynalama efekti oluşturabilirsiniz.
+glCopyTexImage2D():
+
+glCopyTexImage2D() fonksiyonu, bir OpenGL tekstürünün mevcut bir pencere veya framebuffer alanından kopyalanarak yeni bir tekstür olarak oluşturulmasını sağlar.
+Kullanımı: glCopyTexImage2D(target, level, internalformat, x, y, width, height, border)
+Örnek: Ekran görüntüsü alarak veya belirli bir bölgeyi yakalayarak bu bölgeyi bir tekstür olarak kullanabilirsiniz.
+Bu üç fonksiyon, OpenGL'de tekstür işlemleri sırasında çok kullanışlıdır ve farklı görsel efektler ve işlemler için kullanılabilir. 
+Fonksiyonların kullanımı, hedef (target), seviye (level), boyutlar (width ve height), veri formatı (format ve type), kaynak koordinatlar (xoffset, yoffset, x, ve y) ve daha fazla parametre içerir. Bu parametreler, belirli bir işlem için gerekli olan detayları belirtir.
