@@ -1,0 +1,2 @@
+gl_PointSize sets point size
+primitive must be GL_POINT
