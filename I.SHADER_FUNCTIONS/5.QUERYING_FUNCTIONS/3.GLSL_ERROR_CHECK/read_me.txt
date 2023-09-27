@@ -1,0 +1,1 @@
+The application must be opened with visual studio code editor

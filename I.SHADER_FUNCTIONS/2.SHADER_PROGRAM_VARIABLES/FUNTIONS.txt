@@ -14,5 +14,5 @@ Shader Variables [2.10.4]
 	void glUniformMatrix{234}fv(int location, sizei count, boolean transpose, const float *value);
 	transpose: FALSE
 
-DAHA_FAZLA_KAYNAK:
+RESOURCES:
 https://graphicscompendium.com/intro/01-graphics-pipeline

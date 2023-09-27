@@ -31,10 +31,10 @@ ACTIVE_UNIFORMS, ACTIVE_UNIFORM_MAX_LENGTH
 void GetProgramInfoLog(uint program, sizei bufSize, sizei *length, char *infoLog);
 
 
-PRECISION_SORGULAMA
+PRECISION_QUERY
 void GetShaderPrecisionFormat(enum shadertype, enum precisiontype, int *range, int *precision);
 shadertype: VERTEX_SHADER, FRAGMENT_SHADER
 precision: LOW_FLOAT, MEDIUM_FLOAT, HIGH_FLOAT, LOW_INT,MEDIUM_INT, HIGH_INT
 
-DAHA_FAZLA_KAYNAK:
+MORE_RESOURCES
 https://graphicscompendium.com/intro/01-graphics-pipeline
